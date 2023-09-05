@@ -1,0 +1,150 @@
+/* hero section */
+
+.hero__section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+
+    .hero__img{
+        max-width: 800px;
+    }
+
+    .hero__img img{
+        width: 100%;
+    }
+}
+
+/* what we do section */
+
+.wedo__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    .wedo__content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .wedo__img {
+        user-select: none;
+        position: relative;
+    }
+
+    .wedo__img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+
+}
+
+/* about section */
+
+.about__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+
+    .section__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .paragraph {
+            text-align: start;
+        }
+
+        
+
+    }
+
+}
+
+
+/* why choose us */
+
+.choose__us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .center__content {
+        .paragraph {
+            max-width: 600px;
+        }
+
+        .btn {
+            min-width: fit-content;
+        }
+    }
+
+    .section__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .number {
+                color: var(--primary-color);
+                text-align: center;
+                font-size: 58px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 0.5px;
+            }
+
+            .small__heading {
+                color: #222;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 0.5px;
+            }
+
+            .paragraph{
+                max-width: 100%;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:1200px) {
+    .about__section{
+        flex-direction: column;
+    }
+
+    .choose__us{
+        .section__cards{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
