@@ -112,6 +112,16 @@ h3 {
     letter-spacing: 0.5px;
 }
 
+.small__heading {
+    color: #222;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
 .paragraph {
     text-align: center;
     max-width: 442px;
@@ -126,6 +136,24 @@ h3 {
     color: var(--primary-color);
 }
 
+.link {
+    color: var(--dark-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    transition: .3s color;
+}
+
+.active {
+    color: var(--primary-color);
+}
+
+.link:hover {
+    color: #888888;
+}
+
 .center__content {
     display: flex;
     flex-direction: column;
@@ -136,7 +164,7 @@ h3 {
         position: relative;
 
         .title {
-            max-width: 560px;
+            max-width: 581px;
             color: var(--secondry-color);
             text-align: center;
             font-size: 72px;
@@ -146,6 +174,7 @@ h3 {
             letter-spacing: 0.5px;
         }
 
+
         .heading {
             max-width: 650px;
             text-align: center;
@@ -153,8 +182,8 @@ h3 {
 
         .leftimg {
             position: absolute;
-            bottom: -20px;
-            left: -40px;
+            bottom: -16px;
+            left: 30px;
         }
 
         .rightimg {
@@ -171,26 +200,92 @@ h3 {
 
 }
 
-.section__topimg{
+.section__topimg {
     width: 86px;
 }
 
+.pc__off {
+    display: none;
+}
 
+.number {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+
+    .paragraph {
+        max-width: 100%;
+    }
+
+}
 
 /* media queries */
 
 @media (max-width:1200px) {
+
+    .tab__off {
+        display: none;
+    }
+
+    .pc__off {
+        display: flex !important;
+    }
+
     .about__section {
         .section__content {
             align-items: center;
-            
-            .heading{
+
+            .heading {
                 text-align: center;
             }
 
-            .paragraph{
+            .paragraph {
                 text-align: center;
             }
         }
+    }
+}
+
+
+
+@media (max-width:620px) {
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .center__content {
+        .title__container {
+            .title {
+                font-size: 60px;
+            }
+
+            .leftimg {
+                display: none;
+            }
+
+            .rightimg {
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width:450px) {
+    .btn {
+        width: 100%;
     }
 }

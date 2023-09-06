@@ -8,22 +8,63 @@
         display: flex;
         align-items: center;
         gap: 32px;
+    }
 
-        .link {
-            color: var(--dark-color);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            letter-spacing: 0.5px;
-            transition: .3s color;
-        }
 
-        .active{
-            color: var(--primary-color);
+
+    .menu__center {
+        display: none;
+        width: 30px;
+    }
+
+    .menu__center:before,
+    .menu__center:after,
+    .menu__center div {
+        background: var(--primary-color);
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 3px;
+        margin: 4px 0;
+        transition: 0.5s;
+    }
+
+    .active__menu:before {
+        transform: translateY(5px) rotate(135deg);
+    }
+
+    .active__menu:after {
+        transform: translateY(-10px) rotate(-135deg);
+    }
+
+    .active__menu div {
+        transform: scale(0);
+    }
+}
+
+
+@media (max-width:850px) {
+    .nav__bar {
+        position: relative;
+        .nav__links{
+            backdrop-filter: blur(10px);
+            background-color: #E9FAF7;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+            left: 0;
+            top: -500px;
+            height: 400px;
+            width: 100%;
+            position: absolute;
+            transition: .3s;
         }
-        .link:hover{
-            color: #888888;
+        .active__navlinks{
+            top: 0;
+        }
+        .menu__center {
+            z-index: 1;
+            display: block;
         }
     }
 }

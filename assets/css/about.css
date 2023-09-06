@@ -1,0 +1,39 @@
+.hero__section{
+    flex-direction: row;
+
+    .center__content{
+        align-items: start;
+
+        .title__container{
+            .heading{
+                text-align: start;
+            }
+        }
+
+        .paragraph{
+            text-align: start;
+        }
+    }
+}
+
+.capabilites__section {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .center__content {
+        .title__container {
+            .heading {
+                max-width: 450px;
+            }
+        }
+    }
+
+    .wedo__services {
+        display: flex;
+
+        .card {
+            width: 100%;
+        }
+    }
+}
