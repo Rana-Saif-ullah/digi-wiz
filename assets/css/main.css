@@ -200,6 +200,19 @@ h3 {
 
 }
 
+.section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .paragraph {
+        text-align: start;
+    }
+
+
+
+}
+
 .section__topimg {
     width: 86px;
 }

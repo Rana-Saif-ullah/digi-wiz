@@ -1,3 +1,7 @@
+body{
+    background: #E9FAF7 !important;
+}
+
 .hero__section{
     flex-direction: row;
 
