@@ -1,20 +1,21 @@
-body{
+body {
     background: #E9FAF7 !important;
 }
 
-.hero__section{
+.hero__section {
     flex-direction: row;
+    justify-content: space-between;
 
-    .center__content{
+    .center__content {
         align-items: start;
 
-        .title__container{
-            .heading{
+        .title__container {
+            .heading {
                 text-align: start;
             }
         }
 
-        .paragraph{
+        .paragraph {
             text-align: start;
         }
     }
@@ -34,10 +35,121 @@ body{
     }
 
     .wedo__services {
-        display: flex;
+        display: grid;
+        align-items: center;
+        gap: 40px;
+        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
 
         .card {
             width: 100%;
+        }
+    }
+}
+
+.about__choose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .section__content {
+        .paragraph {
+            max-width: 800px;
+        }
+    }
+
+    .aboutchoose__data {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .data__card {
+            display: flex;
+            gap: 20px;
+
+            .data {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .small__heading {
+                    text-align: start;
+                }
+
+                .paragraph {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+
+@media (max-width:1200px) {
+    .about__choose {
+        .section__content {
+            .paragraph {
+                max-width: 350px;
+            }
+        }
+    }
+
+    .capabilites__section {
+        .wedo__services {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .wedo__services>.card:nth-child(4) {
+            grid-column: 2 / 3;
+        }
+    }
+
+
+}
+
+@media (max-width:950px) {
+
+    .about__choose {
+        gap: 64px;
+        align-items: start;
+        flex-direction: column;
+        .section__content {
+            .paragraph {
+                max-width: 850px;
+            }
+        }
+    }
+
+    .hero__section {
+        .hero__img {
+            display: none;
+        }
+    }
+
+    .capabilites__section {
+        .wedo__services {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .capabilites__section {
+        .wedo__services {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
