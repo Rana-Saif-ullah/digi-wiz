@@ -1,0 +1,11 @@
+.portfolio__section {
+    .sub__title {
+        color: var(--primary-color, #26BD9A);
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.5px;
+    }
+}
