@@ -8,9 +8,22 @@
         display: flex;
         align-items: center;
         gap: 32px;
+
+        .link{
+            position: relative;
+        }
+
+        .link.active::after{
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            width: 0;
+            left: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            width: 100%;
+        }
     }
-
-
 
     .menu__center {
         display: none;
@@ -39,32 +52,5 @@
 
     .active__menu div {
         transform: scale(0);
-    }
-}
-
-
-@media (max-width:850px) {
-    .nav__bar {
-        position: relative;
-        .nav__links{
-            backdrop-filter: blur(10px);
-            background-color: #E9FAF7;
-            flex-direction: column;
-            justify-content: center;
-            z-index: 1;
-            left: 0;
-            top: -500px;
-            height: 400px;
-            width: 100%;
-            position: absolute;
-            transition: .3s;
-        }
-        .active__navlinks{
-            top: 0;
-        }
-        .menu__center {
-            z-index: 1;
-            display: block;
-        }
     }
 }

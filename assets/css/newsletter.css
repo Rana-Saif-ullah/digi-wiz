@@ -1,0 +1,57 @@
+/* newsletter */
+
+.newsletter__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .heading {
+        text-align: center;
+    }
+
+    .mobile__input {
+        display: none;
+    }
+
+    .mobile__input input {
+        padding: 20px;
+        color: #444;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        background: transparent;
+        outline: none;
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid rgba(68, 68, 68, 0.50);
+    }
+
+    .input {
+        padding: 10px 10px 10px 28px;
+        border-radius: 50px;
+        overflow: hidden;
+        border: 2px solid rgba(68, 68, 68, 0.50);
+        display: flex;
+    
+        .btn{
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+    }
+
+    .input input {
+        color: #444;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        background: transparent;
+        border: 0;
+        outline: none;
+        width: 340px;
+    }
+}

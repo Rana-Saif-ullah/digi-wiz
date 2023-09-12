@@ -2,23 +2,76 @@ body {
     background: #E9FAF7 !important;
 }
 
-.hero__section {
-    flex-direction: row;
+
+/* what we do section */
+
+.wedo__section {
+    flex-direction: column;
+
+    .wedo__content {
+        align-items: center !important;
+
+        .heading {
+            text-align: center;
+        }
+    }
+
+
+}
+
+.service__container {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: 64px 10vw;
 
-    .center__content {
-        align-items: start;
+    .heading {
+        color: var(--primary-color, #26BD9A);
+        font-family: Raleway;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.677px;
+    }
 
-        .title__container {
-            .heading {
-                text-align: start;
-            }
+    .service__card {
+        max-width: 450px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .paragraph {
+            font-size: 20px;
+        }
+
+        .small__heading {
+            font-size: 42px;
+        }
+    }
+
+    .service__card img {
+        width: 200px;
+    }
+
+    .service__detail {
+        min-width: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .heading{
+            text-align: center;
         }
 
         .paragraph {
-            text-align: start;
+            font-size: 20px;
+            color: #444;
         }
     }
+
 }
 
 .capabilites__section {
@@ -85,71 +138,3 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-/* media query */
-
-@media (max-width:1200px) {
-    .about__choose {
-        .section__content {
-            .paragraph {
-                max-width: 350px;
-            }
-        }
-    }
-
-    .capabilites__section {
-        .wedo__services {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .wedo__services>.card:nth-child(4) {
-            grid-column: 2 / 3;
-        }
-    }
-
-
-}
-
-@media (max-width:950px) {
-
-    .about__choose {
-        gap: 64px;
-        align-items: start;
-        flex-direction: column;
-        .section__content {
-            .paragraph {
-                max-width: 850px;
-            }
-        }
-    }
-
-    .hero__section {
-        .hero__img {
-            display: none;
-        }
-    }
-
-    .capabilites__section {
-        .wedo__services {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media (max-width:500px) {
-    .capabilites__section {
-        .wedo__services {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-}

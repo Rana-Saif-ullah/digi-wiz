@@ -20,9 +20,11 @@
     <!-- favicon -->
     <link rel="icon" href="assets/images/logo.png">
 
-
     <!-- main css link -->
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- media css link -->
+    <link rel="stylesheet" href="assets/css/mediaquries.css">
 
     <!-- remixicon cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -40,15 +42,27 @@
 
     <nav class="nav__bar">
 
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Digi Wiz">
-        </div>
-
         <div class="nav__links" id="nav__links">
 
             <a href="index.html" class="link active">
                 Home
             </a>
+
+            <a href="about.html" class="link">
+                About Us
+            </a>
+
+            <a href="choose.html" class="link">
+                Why Choose Us?
+            </a>
+
+        </div>
+
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Digi Wiz" loading="lazy">
+        </div>
+
+        <div class="nav__links" id="nav__links">
 
             <a href="service.html" class="link">
                 Our Services
@@ -58,11 +72,7 @@
                 Our Projects
             </a>
 
-            <a href="team.html" class="link">
-                Our Team
-            </a>
-
-            <a href="contact." class="link">
+            <a href="contact.html" class="link">
                 Contact
             </a>
 
@@ -83,7 +93,7 @@
             <div class="title__container">
                 <img class="leftimg" src="assets/images/titleleft.png">
                 <h1 class="title">
-                    Building Brands, Not Just Businesses<span class="dot__primary">.</span>
+                    Building Brands, <span>Not Just</span> Businesses
                 </h1>
                 <img class="rightimg" src="assets/images/titleright.png">
             </div>
@@ -94,7 +104,6 @@
 
             <a href="#wedo__section" class="btn">
                 Let’s get started
-                <img src="assets/images/arrow.svg">
             </a>
 
         </div>
@@ -105,19 +114,52 @@
 
     </div>
 
+    <!-- about section -->
+
+    <div class="about__section section">
+
+        <div class="about__img">
+            <img src="assets/images/aboutimg.png" alt="">
+        </div>
+
+        <div class="section__content">
+            <img class="section__topimg" src="assets/images/about.png" alt="">
+
+            <span class="sub__title">
+                About Us
+            </span>
+
+            <h1 class="heading">
+                About Your Digi Wiz: More than a Name
+            </h1>
+
+            <p class="paragraph">
+                Get to know the heart of our company, our mission, and the faces behind our success.
+            </p>
+
+            <a href="service.html" class="btn">
+                Now More About Us
+            </a>
+
+        </div>
+
+    </div>
+
     <!-- what we do -->
 
     <div id="wedo__section" class="wedo__section section">
 
         <div class="wedo__content">
             <span class="sub__title">
-                What we do
+                What we do ?
             </span>
 
             <h1 class="heading">
-                We're a team of creatives who use cutting-edge technology to shape digital excellence<span
-                    class="dot__primary">.</span>
+                We're providing different types of services like Digital marketing, Website
             </h1>
+            <a href="#" class="btn">
+                Now More About Our Services
+            </a>
         </div>
 
         <div class="wedo__services pc__off">
@@ -184,41 +226,8 @@
 
     </div>
 
-    <!-- about section -->
-
-    <div class="about__section section">
-
-        <div class="about__img">
-            <img src="assets/images/aboutimg.png" alt="">
-        </div>
-
-        <div class="section__content">
-            <img class="section__topimg" src="assets/images/about.png" alt="">
-
-            <span class="sub__title">
-                About Us
-            </span>
-
-            <h1 class="heading">
-                About Your Digi Wiz: More than a Name<span class="dot__primary">.</span>
-            </h1>
-
-            <p class="paragraph">
-                Get to know the heart of our company, our mission, and the faces behind our success.
-            </p>
-
-            <a href="service.html" class="btn border__btn">
-                Know more
-                <img src="assets/images/arrowcolor.svg">
-            </a>
-
-        </div>
-
-    </div>
-
     <!-- why choose us -->
     <div class="choose__us section">
-
 
         <div class="center__content">
             <img class="section__topimg" src="assets/images/whychoos.png" alt="">
@@ -228,7 +237,7 @@
 
             <div class="title__container">
                 <h1 class="heading">
-                    Unparalleled Excellence & Support<span class="dot__primary">.</span>
+                    Unparalleled Excellence & Support
                 </h1>
             </div>
 
@@ -236,11 +245,6 @@
                 Experience excellence through our top-tier service, dedicated support, and lasting client relationships.
                 Our proven results and satisfied customers make us your premier choice.
             </p>
-
-            <a href="#portfolio" class="btn border__btn">
-                See Portfolio
-                <img src="assets/images/arrowcolor.svg">
-            </a>
 
         </div>
 
@@ -284,6 +288,10 @@
             </div>
         </div>
 
+        <a href="choose.html" class="btn">
+            Now More Why Choose Us ?
+        </a>
+
     </div>
 
     <!-- portfolio section -->
@@ -292,7 +300,9 @@
 
 
         <div class="center__content">
+
             <img class="section__topimg" src="assets/images/port.png" alt="">
+
             <span class="sub__title">
                 Our Portfolio
             </span>
@@ -300,18 +310,13 @@
             <div class="title__container">
                 <h1 class="heading">
                     Check our
-                    awesome portfolio<span class="dot__primary">.</span>
+                    awesome portfolio
                 </h1>
             </div>
 
             <p class="paragraph">
                 See what we do for our clients.
             </p>
-
-            <a href="#" class="btn border__btn">
-                Explore more
-                <img src="assets/images/arrowcolor.svg">
-            </a>
 
         </div>
 
@@ -379,6 +384,10 @@
 
         </div>
 
+        <a href="#" class="btn">
+            See More projects
+        </a>
+
     </div>
 
     <!-- testomonial -->
@@ -391,7 +400,7 @@
                 Testimonial
             </span>
             <h1 class="heading">
-                What our clients say about us<span class="dot__primary">.</span>
+                What our clients say about us
             </h1>
 
             <div class="arrows">
@@ -506,7 +515,9 @@
     <!-- newsletter -->
 
     <div class="newsletter__section section">
+
         <img src="assets/images/subscribe.png" alt="Newsletter Section">
+
         <span class="sub__title">
             Subscribe
         </span>
