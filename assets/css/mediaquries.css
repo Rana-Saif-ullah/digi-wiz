@@ -117,7 +117,7 @@
 
 
 
-@media (max-width:915px) {
+@media (max-width:996px) {
     .nav__bar {
         position: relative;
         .nav__links{
@@ -140,6 +140,15 @@
             z-index: 1;
             display: block;
         }
+    }
+
+    .service__container{
+        gap: 48px;
+        flex-direction: column;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
     }
 }
 
