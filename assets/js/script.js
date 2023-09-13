@@ -1,34 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const testimonials = document.querySelectorAll('.testimonial');
-    const numVisible = 2; // Number of testimonials to display at a time
-    let currentSlide = 0;
+var menu = document.getElementById("menu__center");
+var nav__links = document.getElementById("nav__links");
 
-    function showSlides(startIndex) {
-        testimonials.forEach((testimonial, i) => {
-            if (i >= startIndex && i < startIndex + numVisible) {
-                testimonial.style.display = 'block';
-            } else {
-                testimonial.style.display = 'none';
-            }
-        });
-    }
-
-    function nextSlide() {
-        if (currentSlide < testimonials.length - numVisible) {
-            currentSlide++;
-        }
-        showSlides(currentSlide);
-    }
-
-    function prevSlide() {
-        if (currentSlide > 0) {
-            currentSlide--;
-        }
-        showSlides(currentSlide);
-    }
-
-    document.getElementById('nextBtn').addEventListener('click', nextSlide);
-    document.getElementById('prevBtn').addEventListener('click', prevSlide);
-
-    showSlides(currentSlide);
+menu.addEventListener("click", function () {
+    menu.classList.toggle("active__menu");
+    nav__links.classList.toggle("active__navlinks");
 });
+
+
+
+let mixerPortfolio = mixitup('.section__cards', {
+    selectors: {
+        target: '.card'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+const linkWork = document.querySelectorAll('.tab__link')
+
+function activework() {
+    linkWork.forEach(l => l.classList.remove('sub__title'))
+    this.classList.add('sub__title')
+}
+
+linkWork.forEach(l => l.addEventListener('click', activework))
+
