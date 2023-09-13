@@ -14,6 +14,9 @@
     <!-- newsletter css link -->
     <link rel="stylesheet" href="assets/css/newsletter.css">
 
+    <!-- testomonial css link -->
+    <link rel="stylesheet" href="assets/css/testomonial.css">
+
     <!-- footer css link -->
     <link rel="stylesheet" href="assets/css/footer.css">
 
@@ -39,12 +42,12 @@
 <body>
 
     <style>
-        .wedo__services{
+        .wedo__services {
             display: none !important;
         }
 
         @media (max-width:1200px) {
-            .wedo__services{
+            .wedo__services {
                 display: flex !important;
             }
         }
@@ -396,25 +399,19 @@
 
     <!-- testomonial -->
 
-    <!-- <div class="testomonial__section section">
+    <div class="testimonial__section section">
 
-        <div class="testomonial__content">
+        <div class="testimonial__content">
             <img class="section__topimg" src="assets/images/testomonial.png" alt="Stars">
-            <span class="sub__title">
-                Testimonial
-            </span>
-            <h1 class="heading">
-                What our clients say about us
-            </h1>
-
+            <span class="sub__title">Testimonial</span>
+            <h1 class="heading">What our clients say about us</h1>
             <div class="arrows">
-                <i class="ri-arrow-left-s-line"></i>
-                <i class="ri-arrow-right-s-line"></i>
+                <i class="ri-arrow-left-s-line left"></i>
+                <i class="ri-arrow-right-s-line right"></i>
             </div>
-
         </div>
 
-        <div class="testomonial__sliders">
+        <div class="testimonial__slider">
             <div class="slide">
                 <img src="assets/images/“.png" .png alt="">
                 <p class="paragraph">
@@ -428,7 +425,6 @@
                     Project Manager
                 </p>
             </div>
-
             <div class="slide">
                 <img src="assets/images/“.png" .png alt="">
                 <p class="paragraph">
@@ -442,7 +438,6 @@
                     Project Manager
                 </p>
             </div>
-
             <div class="slide">
                 <img src="assets/images/“.png" .png alt="">
                 <p class="paragraph">
@@ -456,49 +451,6 @@
                     Project Manager
                 </p>
             </div>
-
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
-
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
-
             <div class="slide">
                 <img src="assets/images/“.png" .png alt="">
                 <p class="paragraph">
@@ -514,7 +466,8 @@
             </div>
         </div>
 
-    </div> -->
+    </div>
+
 
     <!-- newsletter -->
 
@@ -637,10 +590,45 @@
 
 
 
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <script src="assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.testimonial__slider .slide');
+            const numVisible = 2; // Number of slides to display at a time
+            let currentSlide = 0;
+
+            function showSlides(startIndex) {
+                slides.forEach((slide, i) => {
+                    if (i >= startIndex && i < startIndex + numVisible) {
+                        slide.style.display = 'flex';
+                    } else {
+                        slide.style.display = 'none';
+                    }
+                });
+            }
+
+            function nextSlide() {
+                if (currentSlide < slides.length - numVisible) {
+                    currentSlide++;
+                }
+                showSlides(currentSlide);
+            }
+
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                }
+                showSlides(currentSlide);
+            }
+
+            document.querySelector('.arrows #nextBtn').addEventListener('click', nextSlide);
+            document.querySelector('.arrows #prevBtn').addEventListener('click', prevSlide);
+
+            showSlides(currentSlide);
+        });
+
+    </script>
 
 </body>
 
