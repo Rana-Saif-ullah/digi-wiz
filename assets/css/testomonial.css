@@ -38,11 +38,16 @@
         overflow: scroll;
 
         .slide {
-            min-width: calc(50% - 10px);
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: start;
             gap: 20px;
+
+            .small__heading{
+                display: inline;
+                align-items: start;
+            }
 
             .paragraph {
                 color: #444;
@@ -54,4 +59,8 @@
     .testimonial__slider::-webkit-scrollbar {
         display: none;
     }
+}
+
+.transform{
+    transform: translateX(-500px);
 }

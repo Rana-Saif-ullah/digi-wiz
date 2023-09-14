@@ -411,46 +411,7 @@
             </div>
         </div>
 
-        <div class="testimonial__slider">
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
-            <div class="slide">
-                <img src="assets/images/“.png" .png alt="">
-                <p class="paragraph">
-                    We have the best creative team that bring your ideas to life
-                </p>
-                <img src="assets/images/profile.png" alt="Profile">
-                <h1 class="small__heading">
-                    Theresa Johanson
-                </h1>
-                <p class="paragraph">
-                    Project Manager
-                </p>
-            </div>
+        <div id="testimonial__slider" class="testimonial__slider">
             <div class="slide">
                 <img src="assets/images/“.png" .png alt="">
                 <p class="paragraph">
@@ -587,46 +548,9 @@
 
     </div>
 
-
-
-
     <script src="assets/js/script.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const slides = document.querySelectorAll('.testimonial__slider .slide');
-            const numVisible = 2; // Number of slides to display at a time
-            let currentSlide = 0;
-
-            function showSlides(startIndex) {
-                slides.forEach((slide, i) => {
-                    if (i >= startIndex && i < startIndex + numVisible) {
-                        slide.style.display = 'flex';
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-            }
-
-            function nextSlide() {
-                if (currentSlide < slides.length - numVisible) {
-                    currentSlide++;
-                }
-                showSlides(currentSlide);
-            }
-
-            function prevSlide() {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                }
-                showSlides(currentSlide);
-            }
-
-            document.querySelector('.arrows #nextBtn').addEventListener('click', nextSlide);
-            document.querySelector('.arrows #prevBtn').addEventListener('click', prevSlide);
-
-            showSlides(currentSlide);
-        });
 
     </script>
 
