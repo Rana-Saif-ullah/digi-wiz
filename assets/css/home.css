@@ -177,6 +177,11 @@
             .small__heading {
                 width: fit-content;
             }
+
+            >img{
+                width: 400px;
+                height: 350px;
+            }
         }
     }
 }

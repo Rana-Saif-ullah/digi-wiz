@@ -28,58 +28,52 @@ menu.addEventListener("click", function () {
 
 
 
-const arr = [
+const portfolioporject = [
     {
-        text: "Rizwzn",
-        role: "CEO",
+        projectname: "This is Digital",
+        projecttype: "Agency Website",
+        porjectimglink: "assets/images/workimages/digital.png",
     },
     {
-        text: "Saif",
-        role: "CEO",
+        projectname: "Rizwzn",
+        projecttype: "CEO",
+        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
     },
     {
-        text: "Zeeshan",
-        role: "CEO",
+        projectname: "Rizwzn",
+        projecttype: "CEO",
+        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
     },
     {
-        text: "Rizwzn",
-        role: "CEO",
+        projectname: "Rizwzn",
+        projecttype: "CEO",
+        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
     },
     {
-        text: "Rizwzn",
-        role: "CEO",
+        projectname: "Rizwzn",
+        projecttype: "CEO",
+        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
     },
     {
-        text: "Rizasdfasdfsdfsdrfwzn",
-        role: "CEO",
-    }
+        projectname: "Rizwzn",
+        projecttype: "CEO",
+        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+    },
 ]
-let first = 0;
-let last = 1;
-const arraySlice = arr.slice(first, last)
 
-arraySlice.forEach(item => {
-    document.getElementById("testimonial__slider").innerHTML +=
-        `
-        <div class="slide">
-            <img src="assets/images/“.png" .png alt="">
-            <p class="paragraph">
-               We have the best creative team that bring your ideas to life
-             </p>
-            <img src="assets/images/profile.png" alt="Profile">
+portfolioporject.map(item => {
+    document.getElementById("portfolio__cards").innerHTML +=
+    `
+        <div class="card mix website">
+            <img src="${item.porjectimglink}" alt="">
+            <span class="sub__title">
+                ${item.projecttype}
+            </span>
             <h1 class="small__heading">
-                ${item.text}
+                ${item.projectname}
             </h1>
-            <p class="paragraph">
-                ${item.role}
-            </p>
         </div>
     `
 });
 
 
-function slider(){
-    var left = document.getElementById(".left")
-}
-
-console.log(slider())
