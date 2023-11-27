@@ -240,10 +240,15 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
+    transition: .3s transform;
+    cursor: pointer;
 
     .paragraph {
         max-width: 100%;
     }
 
+}
+
+.card:hover{
+    transform: scale(1.03);
 }

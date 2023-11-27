@@ -164,6 +164,10 @@
             text-align: center;
             align-items: center;
 
+            .paragraph{
+                text-align: centerw;
+            }
+
             .heading {
                 max-width: 600px;
             }

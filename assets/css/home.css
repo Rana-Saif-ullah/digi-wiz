@@ -8,6 +8,7 @@
 
     .hero__img {
         max-width: 800px;
+        display: none;
     }
 
     .hero__img img {
@@ -28,6 +29,10 @@
         flex-direction: column;
         align-items: start;
         gap: 20px;
+
+        .paragraph {
+            text-align: start;
+        }
     }
 
     .wedo__img {
@@ -83,7 +88,18 @@
 
     .about__img {
         max-width: 800px;
+        border-radius: 40px;
+
+        /* >img {
+            transition: .3s;
+        } */
     }
+
+    /* .about__img:hover {
+        >img {
+            box-shadow: 0 4px 20px rgba(33, 208, 178, .3);
+        }
+    } */
 
     .about__img img {
         width: 100%;
@@ -178,7 +194,7 @@
                 width: fit-content;
             }
 
-            >img{
+            >img {
                 width: 400px;
                 height: 350px;
             }
