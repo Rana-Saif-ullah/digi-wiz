@@ -253,16 +253,27 @@ h3 {
     transform: scale(1.03);
 }
 
+
 @media (max-width:1200px) {
-    .sub__title {
-        font-size: 46px;
+    .center__content {
+        .title__container {
+            .rightimg,
+            .leftimg{
+                display: none;
+            }
+            .title {
+                font-size: 48px;
+            }
+        }
     }
+}
 
-    .small__heading {
-        font-size: 28px;
-    }
-
-    .heading {
-        font-size: 32px;
+@media (max-width:650px) {
+    .center__content {
+        .title__container {
+            .title {
+                font-size: 36px;
+            }
+        }
     }
 }

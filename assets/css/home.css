@@ -205,6 +205,21 @@
             >img {
                 width: 400px;
                 height: 350px;
+
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .portfolio__section{
+        .section__cards{
+            .card{
+                >img{
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }

@@ -62,7 +62,7 @@ body {
         flex-direction: column;
         gap: 30px;
 
-        .heading{
+        .heading {
             text-align: center;
         }
 
@@ -136,4 +136,3 @@ body {
         }
     }
 }
-

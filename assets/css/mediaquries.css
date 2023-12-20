@@ -120,7 +120,8 @@
 @media (max-width:996px) {
     .nav__bar {
         position: relative;
-        .nav__links{
+
+        .nav__links {
             backdrop-filter: blur(10px);
             background-color: #E9FAF7;
             flex-direction: column;
@@ -133,21 +134,23 @@
             position: absolute;
             transition: .3s;
         }
-        .active__navlinks{
+
+        .active__navlinks {
             top: 0;
         }
+
         .menu__center {
             z-index: 1;
             display: block;
         }
     }
 
-    .service__container{
+    .service__container {
         gap: 48px;
         flex-direction: column;
     }
 
-    .reverse{
+    .reverse {
         flex-direction: column-reverse;
     }
 }
@@ -164,7 +167,7 @@
             text-align: center;
             align-items: center;
 
-            .paragraph{
+            .paragraph {
                 text-align: centerw;
             }
 
@@ -179,13 +182,9 @@
         flex-direction: column;
     }
 
-    .choose__us {
-        .section__cards {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
 }
+
+@media (max-width:1550px) {}
 
 @media (max-width:620px) {
 
@@ -219,9 +218,6 @@
         }
     }
 
-    .footer__section {
-        flex-direction: column;
-    }
 
     .footer__copy {
         gap: 20px;
@@ -230,5 +226,73 @@
         .email {
             align-items: center;
         }
+    }
+}
+
+@media (max-width:1200px) {
+    .sub__title {
+        font-size: 46px;
+    }
+
+    .small__heading {
+        font-size: 28px;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .footer__section {
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column;
+
+        .footer__content{
+            align-items: center !important;
+
+            .paragraph{
+                text-align: center !important;
+            }
+        }
+        
+        .footer__links {
+            align-items: center;
+
+            .links {
+                .link {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .sub__title {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .small__heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .btn {
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 42px !important;
     }
 }
