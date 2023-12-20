@@ -30,41 +30,47 @@ menu.addEventListener("click", function () {
 
 const portfolioporject = [
     {
-        projectname: "This is Digital",
-        projecttype: "Agency Website",
-        porjectimglink: "assets/images/workimages/digital.png",
+        projectname: "Write Plus AI",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/1.png",
+        projectLink: "https://writeplus.ai"
     },
     {
-        projectname: "Rizwzn",
-        projecttype: "CEO",
-        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+        projectname: "ToyToy",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/2.png",
+        projectLink: "https://toytoy.in"
     },
     {
-        projectname: "Rizwzn",
-        projecttype: "CEO",
-        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+        projectname: "The Media Baron",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/3.png",
+        projectLink: "https://themediabaron.in"
     },
     {
-        projectname: "Rizwzn",
-        projecttype: "CEO",
-        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+        projectname: "Smridhi Seth",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/4.png",
+        projectLink: "https://smridhiseth.com"
     },
     {
-        projectname: "Rizwzn",
-        projecttype: "CEO",
-        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+        projectname: "Global Cool",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/5.png",
+        projectLink: "https://globalcool.in"
     },
     {
-        projectname: "Rizwzn",
-        projecttype: "CEO",
-        porjectimglink: "assets/images/workimages/Desktop 23-1.png",
+        projectname: "Einterio",
+        projecttype: "Website Development",
+        porjectimglink: "assets/images/workimages/6.png",
+        projectLink: "https://einterio.com"
     },
 ]
 
 portfolioporject.map(item => {
     document.getElementById("portfolio__cards").innerHTML +=
-    `
-        <div class="card mix website">
+        `
+        <a target="_blank" href="${item.projectLink}" class="card mix website">
             <img src="${item.porjectimglink}" alt="">
             <span class="sub__title">
                 ${item.projecttype}
@@ -72,8 +78,6 @@ portfolioporject.map(item => {
             <h1 class="small__heading">
                 ${item.projectname}
             </h1>
-        </div>
+        </a>
     `
 });
-
-
