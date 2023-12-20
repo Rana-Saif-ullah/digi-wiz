@@ -249,6 +249,20 @@ h3 {
 
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.03);
+}
+
+@media (max-width:1200px) {
+    .sub__title {
+        font-size: 46px;
+    }
+
+    .small__heading {
+        font-size: 28px;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
 }
