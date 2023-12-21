@@ -82,31 +82,22 @@
     <!-- contact section -->
 
     <div class="contact__section section">
-
         <img src="assets/images/contact.png" alt="Contact">
-
         <h1 class="heading">
             Send a message to us
         </h1>
-
-        <form class="contact__form">
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Your Email Address" required>
-
-            <input type="text" placeholder="Subject" required>
-
-            <input type="text" placeholder="Service Type" required>
-
+        <form class="contact__form" action="process.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <input type="text" name="service_type" placeholder="Service Type" required>
+            <button type="submit" class="btn">
+                Send Message
+                <img src="assets/images/arrow.svg" alt="">
+            </button>
         </form>
-
-        <button class="btn">
-            Send Message
-            <img src="assets/images/arrow.svg" alt="">
-        </button>
-
     </div>
+
 
     <!-- newsletter -->
 
