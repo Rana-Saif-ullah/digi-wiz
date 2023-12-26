@@ -58,7 +58,7 @@
 
     .wedo__services {
         width: 100%;
-        
+
         display: grid;
         align-items: center;
         gap: 40px;
@@ -231,5 +231,15 @@
                 }
             }
         }
+    }
+}
+
+.wedo__services {
+    display: none !important;
+}
+
+@media (max-width:1200px) {
+    .wedo__services {
+        display: flex !important;
     }
 }

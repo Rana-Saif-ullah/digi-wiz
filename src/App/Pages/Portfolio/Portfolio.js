@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './portfolio.css'
 function Portfolio() {
   return (
 <div id="portfolio" className="portfolio__section section">
