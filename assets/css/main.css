@@ -111,7 +111,7 @@ h3 {
     max-width: 580px;
     color: #222;
     font-family: Manrope;
-    font-size: 44px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -215,6 +215,10 @@ h3 {
         text-align: start;
     }
 
+    .heading {
+        font-size: 32px;
+    }
+
 }
 
 .section__topimg {
@@ -257,10 +261,12 @@ h3 {
 @media (max-width:1200px) {
     .center__content {
         .title__container {
+
             .rightimg,
-            .leftimg{
+            .leftimg {
                 display: none;
             }
+
             .title {
                 font-size: 48px;
             }

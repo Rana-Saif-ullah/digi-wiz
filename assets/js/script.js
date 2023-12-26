@@ -70,14 +70,40 @@ const portfolioporject = [
 portfolioporject.map(item => {
     document.getElementById("portfolio__cards").innerHTML +=
         `
-        <a target="_blank" href="${item.projectLink}" class="card mix website">
-            <img src="${item.porjectimglink}" alt="">
+        <div target="_blank" href="${item.projectLink}" class="swiper-slide portfolio__card mix website">
+            <img class="card__img" src="${item.porjectimglink}" alt="">
             <span class="sub__title">
                 ${item.projecttype}
             </span>
             <h1 class="small__heading">
                 ${item.projectname}
             </h1>
-        </a>
+        </div>
     `
+});
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        1396: {
+            slidesPerView: 3,
+        },
+        904: {
+            slidesPerView: 2
+        },
+        0: {
+            slidesPerView: 1
+        }
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
 });

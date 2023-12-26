@@ -49,11 +49,13 @@
             flex-direction: column;
 
             .links {
-                flex-wrap: wrap;
                 max-width: 260px;
+
                 display: flex;
                 align-items: center;
                 gap: 16px;
+
+                flex-direction: column;
             }
 
             .link {
