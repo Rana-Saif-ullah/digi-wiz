@@ -1,6 +1,78 @@
-import React from "react";
-import './home.css'
+import React, { useEffect } from "react";
+import "./home.css";
+import Swiper from 'swiper';
+// import 'swiper/css/swiper.css';
+import 'swiper/css';
 function Home() {
+  const portfolioporject = [
+    {
+      projectname: "Write Plus AI",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/1.png",
+      projectLink: "https://writeplus.ai",
+    },
+    {
+      projectname: "ToyToy",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/2.png",
+      projectLink: "https://toytoy.in",
+    },
+    {
+      projectname: "The Media Baron",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/3.png",
+      projectLink: "https://themediabaron.in",
+    },
+    {
+      projectname: "Smridhi Seth",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/4.png",
+      projectLink: "https://smridhiseth.com",
+    },
+    {
+      projectname: "Global Cool",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/5.png",
+      projectLink: "https://globalcool.in",
+    },
+    {
+      projectname: "Einterio",
+      projecttype: "Website Development",
+      porjectimglink: "assets/images/workimages/6.png",
+      projectLink: "https://einterio.com",
+    },
+  ];
+  useEffect(() => {
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1396: {
+          slidesPerView: 3,
+        },
+        904: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
+        },
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    });
+
+    // Destroy Swiper instance on component unmount
+    return () => {
+      swiper.destroy(true, true);
+    };
+  }, []);
   return (
     <>
       <div className="hero__section section">
@@ -157,11 +229,7 @@ function Home() {
       {/* portfolio section */}
       <div id="portfolio" className="portfolio__section section">
         <div className="center__content">
-          <img
-            className="section__topimg"
-            src="assets/images/port.png"
-            alt=""
-          />
+          <img className="section__topimg" src="assets/images/port.png" alt="" />
           <span className="sub__title">Our Portfolio</span>
           <div className="title__container">
             <h1 className="heading">Check our awesome portfolio</h1>
@@ -169,10 +237,18 @@ function Home() {
           <p className="paragraph">See what we do for our clients.</p>
         </div>
         <div className="swiper mySwiper">
-          <div
-            id="portfolio__cards"
-            className="portfolio__cards swiper-wrapper"
-          ></div>
+          <div className="portfolio__cards swiper-wrapper">
+            {portfolioporject.map((project, index) => (
+              <div key={index} className="swiper-slide">
+                <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+                  <img className="card__img" src={project.porjectimglink} alt="" />
+                  <span className="sub__title">{project.projecttype}</span>
+                  <h1 className="small__heading">{project.projectname}</h1>
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="swiper-pagination"></div>
         </div>
         <a href="#" className="btn">
           See More projects
